@@ -566,3 +566,241 @@ Next Development Phase:
 - Keep code scalable for future dashboards and CMS modules.
 
 This document is the source of truth for the Gov Odisha Paribar Portal.
+
+
+
+src/
+│
+├── app/
+│   │
+│   ├── core/
+│   │   │
+│   │   ├── services/
+│   │   │   ├── api.service.ts
+│   │   │   ├── auth.service.ts
+│   │   │   ├── seo.service.ts
+│   │   │   ├── language.service.ts
+│   │   │   ├── storage.service.ts
+│   │   │   ├── logger.service.ts
+│   │   │   ├── notification.service.ts
+│   │   │   └── theme.service.ts
+│   │   │
+│   │   ├── guards/
+│   │   │   ├── auth.guard.ts
+│   │   │   ├── role.guard.ts
+│   │   │   └── guest.guard.ts
+│   │   │
+│   │   ├── interceptors/
+│   │   │   ├── auth.interceptor.ts
+│   │   │   ├── error.interceptor.ts
+│   │   │   ├── loading.interceptor.ts
+│   │   │   └── language.interceptor.ts
+│   │   │
+│   │   ├── constants/
+│   │   │   ├── api-endpoints.ts
+│   │   │   ├── app-routes.ts
+│   │   │   └── app.constants.ts
+│   │   │
+│   │   ├── enums/
+│   │   │   ├── user-role.enum.ts
+│   │   │   ├── language.enum.ts
+│   │   │   ├── status.enum.ts
+│   │   │   └── permissions.enum.ts
+│   │   │
+│   │   ├── config/
+│   │   │   └── app.config.ts
+│   │   │
+│   │   └── tokens/
+│   │
+│   │
+│   ├── layouts/
+│   │   │
+│   │   ├── public-layout/
+│   │   │
+│   │   ├── auth-layout/
+│   │   │
+│   │   ├── citizen-layout/
+│   │   │
+│   │   ├── admin-layout/
+│   │   │
+│   │   └── officer-layout/
+│   │
+│   │
+│   ├── shared/
+│   │   │
+│   │   ├── components/
+│   │   │   │
+│   │   │   ├── header/
+│   │   │   ├── footer/
+│   │   │   ├── button/
+│   │   │   ├── modal/
+│   │   │   ├── loader/
+│   │   │   ├── carousel/
+│   │   │   ├── page-banner/
+│   │   │   ├── section-heading/
+│   │   │   ├── breadcrumb/
+│   │   │   ├── search-box/
+│   │   │   ├── pagination/
+│   │   │   ├── language-switcher/
+│   │   │   ├── social-links/
+│   │   │   ├── image-viewer/
+│   │   │   ├── data-table/
+│   │   │   ├── empty-state/
+│   │   │   └── error-state/
+│   │   │
+│   │   ├── directives/
+│   │   │
+│   │   ├── pipes/
+│   │   │
+│   │   ├── validators/
+│   │   │
+│   │   ├── utils/
+│   │   │
+│   │   └── types/
+│   │       ├── api-response.type.ts
+│   │       ├── pagination.type.ts
+│   │       ├── menu-item.type.ts
+│   │       └── dropdown-option.type.ts
+│   │
+│   │
+│   ├── features/
+│   │   │
+│   │   ├── public/
+│   │   │   │
+│   │   │   ├── home/
+│   │   │   │   │
+│   │   │   │   ├── pages/
+│   │   │   │   │   └── home/
+│   │   │   │   │
+│   │   │   │   ├── sections/
+│   │   │   │   │   ├── hero/
+│   │   │   │   │   ├── notification-ticker/
+│   │   │   │   │   ├── about-us/
+│   │   │   │   │   ├── chief-minister/
+│   │   │   │   │   ├── global-presence/
+│   │   │   │   │   ├── social-news/
+│   │   │   │   │   ├── heritage-grid/
+│   │   │   │   │   ├── government-partners/
+│   │   │   │   │   ├── gallery/
+│   │   │   │   │   └── newsletter/
+│   │   │   │   │
+│   │   │   │   ├── models/
+│   │   │   │   ├── services/
+│   │   │   │   └── store/
+│   │   │   │
+│   │   │   ├── about/
+│   │   │   ├── news/
+│   │   │   ├── heritage/
+│   │   │   ├── gallery/
+│   │   │   ├── contact/
+│   │   │   ├── faq/
+│   │   │   ├── privacy-policy/
+│   │   │   └── terms/
+│   │   │
+│   │   │
+│   │   ├── auth/
+│   │   │   ├── login/
+│   │   │   ├── register/
+│   │   │   ├── forgot-password/
+│   │   │   ├── reset-password/
+│   │   │   ├── otp-verification/
+│   │   │   ├── models/
+│   │   │   ├── services/
+│   │   │   └── store/
+│   │   │
+│   │   │
+│   │   ├── citizen/
+│   │   │   ├── dashboard/
+│   │   │   ├── profile/
+│   │   │   ├── applications/
+│   │   │   ├── documents/
+│   │   │   ├── grievance/
+│   │   │   ├── notifications/
+│   │   │   └── settings/
+│   │   │
+│   │   │
+│   │   ├── admin/
+│   │   │   ├── dashboard/
+│   │   │   ├── users/
+│   │   │   ├── roles/
+│   │   │   ├── permissions/
+│   │   │   ├── content-management/
+│   │   │   ├── banner-management/
+│   │   │   ├── news-management/
+│   │   │   ├── gallery-management/
+│   │   │   ├── heritage-management/
+│   │   │   ├── notification-management/
+│   │   │   ├── partner-management/
+│   │   │   ├── audit-logs/
+│   │   │   └── settings/
+│   │   │
+│   │   │
+│   │   └── officer/
+│   │       ├── dashboard/
+│   │       ├── approvals/
+│   │       ├── reports/
+│   │       ├── applications/
+│   │       └── settings/
+│   │
+│   │
+│   ├── state/
+│   │   ├── auth/
+│   │   ├── user/
+│   │   ├── language/
+│   │   ├── theme/
+│   │   └── app/
+│   │
+│   │
+│   ├── app.routes.ts
+│   ├── app.config.ts
+│   └── app.component.ts
+│
+│
+├── assets/
+│   ├── images/
+│   ├── icons/
+│   ├── svg/
+│   ├── videos/
+│   ├── lottie/
+│   ├── fonts/
+│   └── i18n/
+│       ├── en.json
+│       └── od.json
+│
+│
+├── styles/
+│   │
+│   ├── tokens/
+│   │   ├── _colors.scss
+│   │   ├── _typography.scss
+│   │   ├── _spacing.scss
+│   │   ├── _radius.scss
+│   │   ├── _shadows.scss
+│   │   ├── _breakpoints.scss
+│   │   └── _zindex.scss
+│   │
+│   ├── mixins/
+│   │   ├── _media.scss
+│   │   └── _utilities.scss
+│   │
+│   ├── base/
+│   │   ├── _reset.scss
+│   │   ├── _globals.scss
+│   │   └── _typography.scss
+│   │
+│   ├── layout/
+│   │   ├── _container.scss
+│   │   └── _grid.scss
+│   │
+│   ├── utilities/
+│   │
+│   └── styles.scss
+│
+│
+├── environments/
+│   ├── environment.ts
+│   └── environment.prod.ts
+│
+├── main.ts
+│
+└── index.html
